@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    tools:context=".controller.MainActivityController">
+    <!-- Barra-->
+    <LinearLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/base_layout" />
+    </LinearLayout>
+    <!-- Scroll-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frameLayout"
+        android:elevation="30dp"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingTop="6dp">
+
+            <ImageView
+                android:id="@+id/imagen_cupon"
+                android:layout_width="120dp"
+                android:layout_height="80dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/audi" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/titulo_cupon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audi A1 R-Stronic"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$1,000,000.00 M.N."
+                            android:textColor="@color/rosa"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!-- Seccion de datos-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:text="2015 | 19,664 Km"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:text="Automático"
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="10dp"
+                                android:textStyle="bold" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Audi Center Cuernavaca"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:background="@drawable/corazon" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!--<RelativeLayout
+            android:id="@+id/listView2"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:id="@+id/imagen_cupon"
+                android:background="@drawable/audi"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Audi A4 R-Stronic"
+                android:textSize="15px"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/titulo_cupon"
+                android:layout_alignTop="@+id/imagen_cupon"
+                android:layout_toRightOf="@+id/imagen_cupon" />
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="$10000000 M.N."
+                android:textColor="@color/colorPrecio"
+                android:id="@+id/detalle_cupon"
+                android:textStyle="bold"
+                android:textSize="16px"
+                android:layout_below="@+id/titulo_cupon"
+                android:layout_toRightOf="@+id/imagen_cupon" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Av.Rio Mayo"
+                android:textColor="@color/colorPrimaryDark"
+                android:id="@+id/tipo_cupon"
+                android:textSize="12px"
+                android:layout_below="@+id/imagen_cupon"
+                android:layout_toRightOf="@+id/imagen_cupon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="10000 Kms"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14px"
+                android:textStyle="bold"
+                android:id="@+id/textView"
+                android:layout_alignBottom="@+id/imageButton2"
+                android:layout_toRightOf="@+id/imageButton2"
+                android:layout_toEndOf="@+id/imageButton2" />
+
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageButton"
+                android:background="@drawable/corazon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/imageButton2"
+                android:background="@drawable/kilometros"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imagen_cupon"
+                android:layout_toEndOf="@+id/imagen_cupon" />
+
+            <ImageButton
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:id="@+id/imageButton3"
+                android:background="@drawable/motor"
+                android:layout_alignTop="@+id/imageButton2"
+                android:layout_toRightOf="@+id/titulo_cupon"
+                android:layout_toEndOf="@+id/titulo_cupon"
+                android:layout_marginLeft="23dp"
+                android:layout_marginStart="23dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="TA"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14px"
+                android:id="@+id/textView2"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageButton3"
+                android:layout_toEndOf="@+id/imageButton3" />
+
+        </RelativeLayout>-->
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/relativo_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:elevation="100dp"
+            android:background="@drawable/sombras"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="0.3">
+
+            <RelativeLayout
+                android:id="@+id/pGlobalHeaderLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="false"
+                    android:layout_alignParentRight="false"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:id="@+id/cuponera_tittle"
+                    android:textSize="15px"
+                    android:text="Cuponera de descuentos" />
+                <ImageButton
+                    android:id="@+id/barImage1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="19dp"
+                    android:background="@drawable/back" />
+                <ImageButton
+                    android:id="@+id/barImage2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/settings"
+                    android:layout_marginRight="14dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
