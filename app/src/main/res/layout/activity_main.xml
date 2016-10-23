@@ -167,15 +167,15 @@
                         android:layout_height="wrap_content">
 
                         <ImageButton
+                            android:id="@+id/corazon"
                             android:layout_width="15dp"
                             android:layout_height="15dp"
                             android:layout_alignParentEnd="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
-                            android:background="@drawable/corazon" />
+                            android:background="@drawable/corazon_vacio" />
                     </RelativeLayout>
                 </LinearLayout>
-
 
             </LinearLayout>
 

@@ -15,8 +15,9 @@
             android:background="@drawable/sombras"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="0dp"
-            android:layout_weight="0.3">
-
+            android:layout_weight="0.3"
+            android:orientation="vertical"
+            >
             <RelativeLayout
                 android:id="@+id/pGlobalHeaderLayout"
                 android:layout_width="fill_parent"
@@ -32,6 +33,7 @@
                     android:id="@+id/cuponera_tittle"
                     android:textSize="15px"
                     android:text="Cuponera de descuentos" />
+
                 <ImageButton
                     android:id="@+id/barImage1"
                     android:layout_width="25dp"
@@ -40,16 +42,24 @@
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="19dp"
-                    android:background="@drawable/back" />
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/back"/>
+
                 <ImageButton
                     android:id="@+id/barImage2"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/settings"
+                    android:background="@drawable/soporte"
                     android:layout_marginRight="14dp" />
             </RelativeLayout>
+
         </LinearLayout>
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/sombra3">
+    </LinearLayout>
 </LinearLayout>

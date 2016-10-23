@@ -12,7 +12,7 @@ import java.util.TimerTask;
  * Created by isaigarciamoso on 21/10/16.
  */
 public class SplashViewController extends AppCompatActivity {
-    private int SPLASH_SCREEN_DELAY = 500;
+    private int SPLASH_SCREEN_DELAY = 700;
 
     @Override
     protected void onCreate( Bundle savedInstanceState) {
