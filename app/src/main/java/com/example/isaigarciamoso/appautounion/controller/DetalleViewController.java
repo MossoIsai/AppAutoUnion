@@ -59,5 +59,6 @@ public class DetalleViewController extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         return super.onKeyDown(keyCode, event);
     }
+    /**Vinculación de las vistas con el detalle*/
 
 }

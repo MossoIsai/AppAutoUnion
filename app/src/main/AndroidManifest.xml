@@ -26,7 +26,10 @@
         </activity>
         <activity
             android:name=".controller.Onboarding"
-            android:label="@string/title_activity_onboarding"></activity>
+            android:label="@string/title_activity_onboarding"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".controller.AgenciaViewController"
+            android:label="agencia">
+        </activity>
     </application>
-
 </manifest>
