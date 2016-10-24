@@ -23,13 +23,14 @@ public class Auto {
     private String combustible;
     private String motor;
     private String logo;
+    private String id;
 
 
     public  Auto(){
 
     }
 
-    public Auto(String marca, String modelo, String version, String kilometraje, String anio, String transmicion, String colorExterior, String colorInterior, String descripcion, String votos, String precio, String seminuevo, String vendido, String tipoAuto, String fechaPublicacion, String combustible, String motor) {
+    public Auto(String marca, String modelo, String version, String kilometraje, String anio, String transmicion, String colorExterior, String colorInterior, String descripcion, String votos, String precio, String seminuevo, String vendido, String tipoAuto, String fechaPublicacion, String combustible, String motor, String logo, String id) {
         this.marca = marca;
         this.modelo = modelo;
         this.version = version;
@@ -47,8 +48,25 @@ public class Auto {
         this.fechaPublicacion = fechaPublicacion;
         this.combustible = combustible;
         this.motor = motor;
+        this.logo = logo;
+        this.id = id;
     }
 
+    public String getLogo() {
+        return logo;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getMarca() {
         return marca;
