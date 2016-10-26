@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,27 +17,22 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-        </LinearLayout>
     </ScrollView>
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_lista"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:paddingRight="4dp"
         android:paddingLeft="4dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/frameLayout"
         android:elevation="30dp"
-        card_view:cardCornerRadius="4dp">
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
+            android:id="@+id/item_car"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
@@ -44,7 +40,7 @@
             android:paddingTop="6dp">
 
             <ImageView
-                android:id="@+id/imagen_cupon"
+                android:id="@+id/imagen_auto"
                 android:layout_width="120dp"
                 android:layout_height="80dp"
                 android:layout_alignParentLeft="true"
@@ -57,21 +53,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingRight="10dp">
+                android:paddingRight="10dp"
+                android:id="@+id/layout_text_information">
 
                 <RelativeLayout
+                    android:id="@+id/relative_layout_text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <TextView
-                        android:id="@+id/titulo_cupon"
+                        android:id="@+id/titulo_car"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Audi A1 R-Stronic"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textColor="@color/colorAccent"
-                        android:textSize="12dp"
+                        android:textSize="12px"
                         android:textStyle="bold" />
                 </RelativeLayout>
 
@@ -84,11 +82,12 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/precio"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="$1,000,000.00 M.N."
                             android:textColor="@color/rosa"
-                            android:textSize="10dp"
+                            android:textSize="10px"
                             android:textStyle="bold" />
                     </RelativeLayout>
 
@@ -110,12 +109,13 @@
                             android:layout_height="wrap_content">
 
                             <TextView
+                                android:id="@+id/anio_kilometro"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
                                 android:text="2015 | 19,664 Km"
                                 android:textColor="@color/colorPrimaryDark"
-                                android:textSize="10dp"
+                                android:textSize="10px"
                                 android:textStyle="bold" />
                         </RelativeLayout>
                     </LinearLayout>
@@ -130,7 +130,7 @@
                             android:layout_height="wrap_content">
 
                             <TextView
-                                android:id="@+id/textView"
+                                android:id="@+id/transmicion"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerVertical="true"
@@ -138,7 +138,7 @@
                                 android:layout_marginStart="10dp"
                                 android:text="Automático"
                                 android:textColor="@color/colorPrimaryDark"
-                                android:textSize="10dp"
+                                android:textSize="10px"
                                 android:textStyle="bold" />
                         </RelativeLayout>
                     </LinearLayout>
@@ -149,11 +149,12 @@
                     android:layout_height="wrap_content">
 
                     <TextView
+                        android:id="@+id/nombre_agencia"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Audi Center Cuernavaca"
                         android:textColor="@color/colorPrimaryDark"
-                        android:textSize="9dp"
+                        android:textSize="10px"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -168,12 +169,12 @@
 
                         <ImageButton
                             android:id="@+id/corazon"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:layout_alignParentEnd="true"
-                            android:layout_alignParentRight="true"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:background="@drawable/corazon_vacio"
                             android:layout_alignParentTop="true"
-                            android:background="@drawable/corazon_vacio" />
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true" />
                     </RelativeLayout>
                 </LinearLayout>
 
@@ -285,8 +286,5 @@
                 android:layout_toEndOf="@+id/imageButton3" />
 
         </RelativeLayout>-->
-
     </android.support.v7.widget.CardView>
-
-
 </RelativeLayout>

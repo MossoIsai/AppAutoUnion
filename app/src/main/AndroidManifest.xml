@@ -29,7 +29,8 @@
             android:label="@string/title_activity_onboarding"
             android:screenOrientation="portrait"></activity>
         <activity android:name=".controller.AgenciaViewController"
-            android:label="agencia">
+            android:label="agencia"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 </manifest>
