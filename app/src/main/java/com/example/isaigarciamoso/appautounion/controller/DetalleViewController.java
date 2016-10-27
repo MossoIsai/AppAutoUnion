@@ -24,6 +24,7 @@ import com.example.isaigarciamoso.appautounion.adapter.AdapterDatos;
 import com.example.isaigarciamoso.appautounion.adapter.AdapterPageView;
 import com.example.isaigarciamoso.appautounion.models.DataFicha;
 import com.example.isaigarciamoso.appautounion.tools.GuiTools;
+import com.example.isaigarciamoso.appautounion.tools.ToolsOperations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,6 +85,7 @@ public class DetalleViewController extends AppCompatActivity implements ViewPage
     private int dotCounts;
     private ImageView[] dots;
     private AdapterPageView adapterPageView;
+    private Button buttonWhatsapp;
 
 
     private int imagesCarArray[] = {
@@ -188,6 +190,8 @@ public class DetalleViewController extends AppCompatActivity implements ViewPage
         viewPagerImgCar.setAdapter(adapterPageView);
         viewPagerImgCar.setCurrentItem(0);
         viewPagerImgCar.setOnPageChangeListener(this);
+        buttonWhatsapp = (Button) findViewById(R.id.whatsapp);
+        buttonWhatsapp.setOnClickListener(this);
         setUiPageViewController();
 
 
@@ -329,7 +333,6 @@ public class DetalleViewController extends AppCompatActivity implements ViewPage
         dots[0].setImageDrawable(getResources().getDrawable(R.drawable.selected_item_oval));
     }
 
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -340,6 +343,11 @@ public class DetalleViewController extends AppCompatActivity implements ViewPage
 
             case R.id.btn_finish:
                 finish();
+                break;
+
+            case R.id.whatsapp:
+                ToolsOperations.showAlerDialogError(R.string.error,R.string.warning_mensaje_correo,this);
+
                 break;
         }
     }

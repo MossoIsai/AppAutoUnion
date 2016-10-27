@@ -7,13 +7,15 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:id="@+id/relative_item_dato">
         <TextView
             android:id="@+id/text_data_fichaTecnica"
             android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:textSize="15px"
+            android:textSize="12px"
+            android:textStyle="bold"
+            android:paddingTop="10dp"
             android:textColor="@color/negro"
             android:text="Color Interior: Negro" />
     </RelativeLayout>

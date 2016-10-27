@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.example.isaigarciamoso.appautounion.R;
 import com.example.isaigarciamoso.appautounion.models.Agencia;
 import com.example.isaigarciamoso.appautounion.models.DataFicha;
+import com.example.isaigarciamoso.appautounion.tools.GuiTools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,9 +39,13 @@ public class AdapterDatos extends ArrayAdapter<DataFicha> {
         textData = (TextView)vista.findViewById(R.id.text_data_fichaTecnica);
         DataFicha dataFicha = (DataFicha) getItem(position);
         textData.setText(dataFicha.getDataFicha());
+
+        GuiTools gTools = GuiTools.getCurrent();
+        gTools.scale(textData,true);
         return vista;
 
         //5558149393
        //$2011 pesos en tarjeta si vale
     }
+
 }
