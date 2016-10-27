@@ -2,8 +2,10 @@ package com.example.isaigarciamoso.appautounion.controller;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -15,10 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
 import com.example.isaigarciamoso.appautounion.R;
+import com.example.isaigarciamoso.appautounion.adapter.AdapterDatos;
+import com.example.isaigarciamoso.appautounion.models.DataFicha;
 import com.example.isaigarciamoso.appautounion.tools.GuiTools;
-
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Created by isaigarciamoso on 20/10/16.
  */
@@ -57,23 +61,23 @@ public class DetalleViewController extends AppCompatActivity {
     private RelativeLayout relativeLayoutInfo;
     private RelativeLayout relativeLayout1;
     private ListView listViewFichaTecnica;
+    private ListView listViewFichaTecnica2;
     private ArrayAdapter<String> adapter;
+    private AdapterDatos adapterDatos;
+    private AdapterDatos adapterDatos2;
+    private ArrayList arrayListDatos;
+    private DataFicha dataFicha;
+    private List<DataFicha> x;
+    private List<DataFicha> x2;
+    private ViewPager viewPagerImgCar;
 
 
-    /***ListView datos test*/
-    private String conbustibleText;
-    private String colorExteriorText;
-    private String colorInteriorText;
-    private String tipoMotorText;
-    private String transmicionText;
-    private String modeloText;
-    private String versionText;
-    private String anioText;
-
-    private String[] fichaTecnica = {"Color Exterior: Negro",
+    private String[] fichaTecnicaArray = {"Color Exterior: Negro",
             "Color Interior: Negro","Tipo de Motor: 1.4T",
-    "Transmisión: Automatica","Modelo: R8","Versión: S-TRONIC","Año: 2016",
-    "Combustible: Gasolina"};
+    "Transmisión: Automática"};
+
+    private String[] fichaTecnicaArray2 = {"Modelo: R8","Versión: S-TRONIC","Año: 2016",
+            "Combustible: Gasolina"};
 
 
     private int arrayImages[] = {R.drawable.whatsapp,
@@ -99,7 +103,9 @@ public class DetalleViewController extends AppCompatActivity {
         }*/
     }
 
-    /*** :::::::::::: Click de los botones :::::::::::::::**/
+    /***
+     * :::::::::::: Click de los botones :::::::::::::::
+     **/
     View.OnClickListener clickListenerActividadAnterior = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -110,8 +116,7 @@ public class DetalleViewController extends AppCompatActivity {
     };
 
 
-
-    public void findViews(){
+    public void findViews() {
         UI();
         configurarPantalla();
     }
@@ -151,34 +156,76 @@ public class DetalleViewController extends AppCompatActivity {
         linearLayoutDataMotor = (LinearLayout)findViewById(R.id.data_motor);
         tipoMotor = (TextView)findViewById(R.id.text_tipo_motor);
         transmicion = (TextView)findViewById(R.id.text_transmicion);*/
-        separador2 = (LinearLayout)findViewById(R.id.separator2);
+        separador2 = (LinearLayout) findViewById(R.id.separator2);
         buttonBackActivity = (ImageButton) findViewById(R.id.barImage1);
         buttonBackActivity.setOnClickListener(clickListenerActividadAnterior);
-        listViewFichaTecnica = (ListView)findViewById(R.id.list_view_ficha_tecnica);
+        listViewFichaTecnica = (ListView) findViewById(R.id.list_view_ficha_tecnica);
+        listViewFichaTecnica2 = (ListView) findViewById(R.id.list_view_ficha_tecnica2);
+        viewPagerImgCar = (ViewPager)findViewById(R.id.viewPager_img_car);
 
-        adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,fichaTecnica);
-        listViewFichaTecnica.setAdapter(adapter);
+        //adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,fichaTecnica);
 
+        arrayListDatos = new ArrayList<>();
+        //dataFicha = new DataFicha();
 
+        /*dataFicha.setDataFicha("Color Exterior: Negro");
+        dataFicha.setDataFicha("Tipo de Motor: 1.4T");
+        dataFicha.setDataFicha("Transmisión: Automática");
+        dataFicha.setDataFicha("Modelo: R8");
+        dataFicha.setDataFicha("Versión: S-TRONIC");
+        dataFicha.setDataFicha("Año: 2016");
+        dataFicha.setDataFicha("Versión: S-TRONIC");
+        dataFicha.setDataFicha("Combustible: Gasolina");*/
 
+        int i = 0 ;
+
+        x = new ArrayList<>();
+        while(i < fichaTecnicaArray.length){
+            dataFicha = new DataFicha();
+            dataFicha.setDataFicha(fichaTecnicaArray[i]);
+            Log.d("VALORES --->",fichaTecnicaArray[i]);
+            x.add(dataFicha);
+            Log.d("valores", String.valueOf(x.get(i)));
+            i++;
+        }
+        adapterDatos = new AdapterDatos(this, x);
+        listViewFichaTecnica.setAdapter(adapterDatos);
+        int j = 0;
+        x2 = new ArrayList<>();
+        while(j  < fichaTecnicaArray2.length){
+            dataFicha = new DataFicha();
+            dataFicha.setDataFicha(fichaTecnicaArray2[j]);
+            Log.d("VALORES --->",fichaTecnicaArray2[j]);
+            x2.add(dataFicha);
+            Log.d("valores", String.valueOf(x2.get(j)));
+            j++;
+        }
+        adapterDatos2 = new AdapterDatos(this, x2);
+        listViewFichaTecnica2.setAdapter(adapterDatos2);
+        // adapterDatos = new AdapterDatos(this, x);
+       // listViewFichaTecnica.setAdapter(adapterDatos);
+        //x.add(dataFicha);
+        //listViewFichaTecnica.setAdapter(adapterDatos);
+        //listViewFichaTecnica.setAdapter(adapter);
+        //listViewFichaTecnica2.setAdapter(adapter);
     }
-
-    /*** Configurar pantalla**/
+    /***
+     * Configurar pantalla
+     **/
     private void configurarPantalla() {
         GuiTools gTools = GuiTools.getCurrent();
         gTools.init(getWindowManager());
-
         gTools.scale(padreLayoutDetalle);
         gTools.scale(padreCardViewAuto);
         gTools.scale(linerLayoutImagen);
         gTools.scale(imgAuto);
         gTools.scale(linearLayout1);
         gTools.scale(linearLayout2);
-        gTools.scale(tituloAuto,true);
+        gTools.scale(tituloAuto, true);
         gTools.scale(imgLike);
         gTools.scale(relativeLayout1);
-        gTools.scale(precioAuto,true);
-        gTools.scale(kilometros,true);
+        gTools.scale(precioAuto, true);
+        gTools.scale(kilometros, true);
         gTools.scale(cardViewHorizontal);
         gTools.scale(layoutScrollHorizontal);
         gTools.scale(itemHorizontalScrollView);
@@ -188,15 +235,16 @@ public class DetalleViewController extends AppCompatActivity {
         gTools.scale(linearLayoutSeccionConbustible);
         gTools.scale(imgConbustible);
         gTools.scale(dataConbustible);
-        gTools.scale(textConbustible,true);
-        gTools.scale(anio,true);
+        gTools.scale(textConbustible, true);
+        gTools.scale(anio, true);
         gTools.scale(linearLayoutDetalleMotor);
         gTools.scale(imgMotor);
         gTools.scale(linearLayoutDataMotor);
-        gTools.scale(tipoMotor,true);
-        gTools.scale(transmicion,true);
+        gTools.scale(tipoMotor, true);
+        gTools.scale(transmicion, true);
         gTools.scale(separador2);
         gTools.scale(listViewFichaTecnica);
+        gTools.scale(listViewFichaTecnica2);
 
     }
 

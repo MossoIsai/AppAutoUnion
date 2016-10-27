@@ -28,14 +28,6 @@ public class AdapterAgencia<T> extends ArrayAdapter<Agencia> {
     private TextView nombre;
     private TextView domicilio;
     private ImageView logoEmpresa,imgPhone;
-    /*private TextView calle;
-    private TextView estado;
-    private TextView numero;
-    private TextView codigoPostal;
-    private TextView municipio;
-    private TextView colonia;
-    private TextView telefono;*/
-
     public AdapterAgencia(Context context, List<Agencia> itemAgencia) {
         super(context, 0, itemAgencia);
     }

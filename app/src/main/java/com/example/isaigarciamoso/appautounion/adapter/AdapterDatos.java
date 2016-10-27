@@ -1,42 +1,46 @@
 package com.example.isaigarciamoso.appautounion.adapter;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.isaigarciamoso.appautounion.R;
+import com.example.isaigarciamoso.appautounion.models.Agencia;
+import com.example.isaigarciamoso.appautounion.models.DataFicha;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * Created by isaigarciamoso on 24/10/16.
+ * Created by isaigarciamoso on 26/10/16.
  */
-public class AdapterDatos<T> extends ArrayAdapter {
+public class AdapterDatos extends ArrayAdapter<DataFicha> {
+    private TextView textData;
 
-   private TextView labelData1;
-   private TextView labelData2;
-   private ImageView imgData;
-
-    public AdapterDatos(Context context, int resource) {
-        super(context, resource);
+    public AdapterDatos(Context context, List<DataFicha> dataFichaTecnica) {
+        super(context, 0, dataFichaTecnica);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View vista =  convertView;
 
-        LayoutInflater inflater  = (LayoutInflater)
+        LayoutInflater layoutInflater = (LayoutInflater)
                 getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View vista = convertView;
 
-        if(convertView == null){
-            vista = inflater.inflate(R.layout.item_character,parent);
+        if (convertView == null) {
+           vista =  layoutInflater.inflate(R.layout.item_character, parent,false);
         }
-        /**Vinculación de vistas*/
-        labelData1 = (TextView)vista.findViewById(R.id.data_one);
-        labelData2 = (TextView)vista.findViewById(R.id.data_two);
-        imgData = (ImageView)vista.findViewById(R.id.img_data);
-
+        textData = (TextView)vista.findViewById(R.id.text_data_fichaTecnica);
+        DataFicha dataFicha = (DataFicha) getItem(position);
+        textData.setText(dataFicha.getDataFicha());
         return vista;
+
+        //5558149393
+       //$2011 pesos en tarjeta si vale
     }
 }
