@@ -6,8 +6,8 @@
     android:id="@+id/img_car"
     android:layout_width="match_parent"
     android:layout_height="220dp"
-    android:scaleType="centerCrop"
-    android:src="@drawable/audi_detalle"
+    android:scaleType="fitXY"
+    android:src="@drawable/img1"
     android:adjustViewBounds="true"
     android:clickable="false" />
 

@@ -11,4 +11,5 @@
     <color name="humo">#6c505050</color>
     <color name="gris_1">#666666</color>
     <color name="gris_2">#3c3c3c</color>
+    <color name="transparente_medio">#c8ffffff</color>
 </resources>

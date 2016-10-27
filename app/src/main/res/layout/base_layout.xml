@@ -2,37 +2,40 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical">
+
     <RelativeLayout
         android:id="@+id/relativo_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <LinearLayout
             android:id="@+id/header_layout"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:elevation="100dp"
-            android:background="@drawable/sombras"
             android:layout_alignParentTop="true"
             android:layout_marginBottom="0dp"
             android:layout_weight="0.3"
-            android:orientation="vertical"
-            >
+            android:background="@drawable/sombras"
+            android:elevation="100dp"
+            android:orientation="vertical">
+
             <RelativeLayout
                 android:id="@+id/pGlobalHeaderLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:background="@color/colorPrimary">
+
                 <TextView
+                    android:id="@+id/cuponera_tittle"
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="false"
                     android:layout_alignParentRight="false"
                     android:layout_centerInParent="true"
                     android:gravity="center"
-                    android:id="@+id/cuponera_tittle"
-                    android:textSize="15px"
-                    android:text="Cuponera de descuentos" />
+                    android:text="Cuponera de descuentos"
+                    android:textSize="15px" />
 
                 <ImageButton
                     android:id="@+id/barImage1"
@@ -41,9 +44,9 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="19dp"
                     android:layout_marginBottom="20dp"
-                    android:background="@drawable/back"/>
+                    android:layout_marginLeft="19dp"
+                    android:background="@drawable/back" />
 
                 <ImageButton
                     android:id="@+id/barImage2"
@@ -51,15 +54,14 @@
                     android:layout_height="26dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/soporte"
-                    android:layout_marginRight="14dp" />
+                    android:layout_marginRight="14dp"
+                    android:background="@drawable/soporte" />
             </RelativeLayout>
-
         </LinearLayout>
     </RelativeLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="@drawable/sombra3">
-    </LinearLayout>
+        android:layout_height="4dp"
+        android:background="@drawable/sombra3"></LinearLayout>
 </LinearLayout>
