@@ -1,10 +1,13 @@
 package com.example.isaigarciamoso.appautounion.controller;
 
 import android.content.Intent;
+import android.graphics.Typeface;
+import android.renderscript.Type;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -28,6 +31,10 @@ public class MainActivityController extends AppCompatActivity {
     private TextView anioKilometro;
     private TextView transmicion;
     private TextView nombreAgencia;
+    private TextView statusAuto;
+    private ImageButton backButton;
+    private ImageButton asistenciaButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,12 +56,30 @@ public class MainActivityController extends AppCompatActivity {
         linearLayout_car  = (LinearLayout)findViewById(R.id.item_car);
         linearLayoutInformationCar = (LinearLayout)findViewById(R.id.layout_text_information);
         imgAuto = (ImageView)findViewById(R.id.imagen_auto);
-
         titulo = (TextView)findViewById(R.id.titulo_car);
         precio = (TextView)findViewById(R.id.precio);
         anioKilometro = (TextView)findViewById(R.id.anio_kilometro);
         transmicion = (TextView)findViewById(R.id.transmicion);
         nombreAgencia = (TextView)findViewById(R.id.nombre_agencia);
+        backButton = (ImageButton)findViewById(R.id.barImage1);
+        asistenciaButton = (ImageButton)findViewById(R.id.barImage2);
+        statusAuto = (TextView)findViewById(R.id.status_auto);
+
+        backButton.setVisibility(View.GONE);
+        asistenciaButton.setBackgroundResource(R.mipmap.mas_opciones);
+
+
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/exo_font.otf");
+        precio.setTypeface(typeface);
+
+        Typeface typeface1 = Typeface.createFromAsset(getAssets(),"fonts/libre2.ttf");
+        statusAuto.setTypeface(typeface1);
+
+
+
+
+
+
 
         corazon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +118,7 @@ public class MainActivityController extends AppCompatActivity {
         gTools.scale(anioKilometro,true);
         gTools.scale(transmicion,true);
         gTools.scale(nombreAgencia,true);
+        gTools.scale(statusAuto,true);
 
     }
 

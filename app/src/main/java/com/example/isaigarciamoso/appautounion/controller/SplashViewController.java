@@ -3,7 +3,11 @@ package com.example.isaigarciamoso.appautounion.controller;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
+
 import com.example.isaigarciamoso.appautounion.R;
+import com.example.isaigarciamoso.appautounion.tools.ToolsOperations;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -17,6 +21,11 @@ public class SplashViewController extends AppCompatActivity {
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.splash);
         //Temporizador
         TimerTask task = new TimerTask() {

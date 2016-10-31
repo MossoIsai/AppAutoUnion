@@ -28,6 +28,7 @@ public class AdapterAgencia<T> extends ArrayAdapter<Agencia> {
     private TextView nombre;
     private TextView domicilio;
     private ImageView logoEmpresa,imgPhone;
+
     public AdapterAgencia(Context context, List<Agencia> itemAgencia) {
         super(context, 0, itemAgencia);
     }
@@ -64,5 +65,7 @@ public class AdapterAgencia<T> extends ArrayAdapter<Agencia> {
             e.printStackTrace();
         }
     }
+
+
 
 }

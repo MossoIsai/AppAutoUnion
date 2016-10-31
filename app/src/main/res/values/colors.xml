@@ -2,6 +2,7 @@
 <resources>
     <color name="colorPrimary">#18b149</color>
     <color name="colorPrimaryDark">#1da84c</color>
+    <color name="verde">#6bb448</color>
     <color name="colorAccent">#fe7f00</color>
     <color name="blanco">#ffffff</color>
     <color name="gris">#eeeeee</color>
@@ -12,5 +13,12 @@
     <color name="plata">#6c505050</color>
     <color name="gris_1">#666666</color>
     <color name="gris_2">#3c3c3c</color>
+    <color name="gris_3">#f5f5f5</color>
     <color name="transparente_medio">#c8ffffff</color>
+    <color name="negro_app">#485060</color>
+    <color name="negro_app2">#353535</color>
+    <color name="azul_rey">#181818</color>
+    <color name="negro_spoti">#181818</color>
+    <color name="negro_spoti2">#282828</color>
+    <color name="presionado_item">#565555</color>
 </resources>

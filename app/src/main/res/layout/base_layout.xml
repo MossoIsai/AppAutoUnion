@@ -16,7 +16,6 @@
             android:layout_alignParentTop="true"
             android:layout_marginBottom="0dp"
             android:layout_weight="0.3"
-            android:background="@drawable/sombras"
             android:elevation="100dp"
             android:orientation="vertical">
 
@@ -24,18 +23,17 @@
                 android:id="@+id/pGlobalHeaderLayout"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:background="@color/colorPrimary">
+                android:background="@color/azul_rey">
 
-                <TextView
+                <ImageView
                     android:id="@+id/cuponera_tittle"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
                     android:layout_alignParentLeft="false"
                     android:layout_alignParentRight="false"
                     android:layout_centerInParent="true"
-                    android:gravity="center"
-                    android:text="Cuponera de descuentos"
-                    android:textSize="15px" />
+                    android:background="@drawable/logo_empresa"
+                    android:gravity="center" />
 
                 <ImageButton
                     android:id="@+id/barImage1"
@@ -44,7 +42,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:layout_marginBottom="20dp"
+                    android:layout_marginBottom="10dp"
                     android:layout_marginLeft="19dp"
                     android:background="@drawable/back" />
 
@@ -58,10 +56,14 @@
                     android:background="@drawable/soporte" />
             </RelativeLayout>
         </LinearLayout>
+
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:background="@drawable/sombra3"></LinearLayout>
+        android:layout_height="3dp"
+        android:background="@color/colorPrimary">
+
+    </LinearLayout>
 </LinearLayout>
+

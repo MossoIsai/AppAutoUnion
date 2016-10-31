@@ -47,7 +47,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/audi" />
+                android:background="@drawable/m2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -66,9 +66,9 @@
                         android:id="@+id/titulo_car"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Audi A1 R-Stronic"
+                        android:text="Audi RS7 Biturbo"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="@color/colorAccent"
+                        android:textColor="@color/colorPrimaryDark"
                         android:textSize="12px"
                         android:textStyle="bold" />
                 </RelativeLayout>
@@ -86,8 +86,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="$1,000,000.00 M.N."
-                            android:textColor="@color/rosa"
-                            android:textSize="10px"
+                            android:textColor="@color/negro_spoti"
+                            android:textSize="12px"
                             android:textStyle="bold" />
                     </RelativeLayout>
 
@@ -114,7 +114,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentTop="true"
                                 android:text="2015 | 19,664 Km"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:textColor="@color/plata"
                                 android:textSize="10px"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -137,7 +137,7 @@
                                 android:layout_marginLeft="10dp"
                                 android:layout_marginStart="10dp"
                                 android:text="Automático"
-                                android:textColor="@color/colorPrimaryDark"
+                                android:textColor="@color/plata"
                                 android:textSize="10px"
                                 android:textStyle="bold" />
                         </RelativeLayout>
@@ -153,7 +153,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Audi Center Cuernavaca"
-                        android:textColor="@color/colorPrimaryDark"
+                        android:textColor="@color/plata"
                         android:textSize="10px"
                         android:textStyle="bold" />
 
@@ -175,6 +175,17 @@
                             android:layout_alignParentTop="true"
                             android:layout_alignParentRight="true"
                             android:layout_alignParentEnd="true" />
+
+                        <TextView
+                            android:text="Seminuevo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textSize="10px"
+                            android:textColor="@color/colorPrimary"
+                            android:id="@+id/status_auto" />
                     </RelativeLayout>
                 </LinearLayout>
 

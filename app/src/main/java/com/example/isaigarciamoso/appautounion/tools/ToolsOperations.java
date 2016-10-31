@@ -6,6 +6,8 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Window;
+import android.view.WindowManager;
 
 import com.example.isaigarciamoso.appautounion.*;
 
@@ -77,4 +79,6 @@ public class ToolsOperations extends AppCompatActivity {
         //progressDialog.setIcon(ICON_CONECTION_HTTP);
         progressDialog.show();
     }
+
+
 }

@@ -24,13 +24,14 @@ public class Auto {
     private String motor;
     private String logo;
     private String id;
+    private String ageciaAuto;
 
 
     public  Auto(){
 
     }
 
-    public Auto(String marca, String modelo, String version, String kilometraje, String anio, String transmicion, String colorExterior, String colorInterior, String descripcion, String votos, String precio, String seminuevo, String vendido, String tipoAuto, String fechaPublicacion, String combustible, String motor, String logo, String id) {
+    public Auto(String marca, String modelo, String version, String kilometraje, String anio, String transmicion, String colorExterior, String colorInterior, String descripcion, String votos, String precio, String seminuevo, String vendido, String tipoAuto, String fechaPublicacion, String combustible, String motor, String logo, String id, String ageciaAuto) {
         this.marca = marca;
         this.modelo = modelo;
         this.version = version;
@@ -50,6 +51,7 @@ public class Auto {
         this.motor = motor;
         this.logo = logo;
         this.id = id;
+        this.ageciaAuto = ageciaAuto;
     }
 
     public String getLogo() {
@@ -202,5 +204,13 @@ public class Auto {
 
     public void setMotor(String motor) {
         this.motor = motor;
+    }
+
+    public String getAgeciaAuto() {
+        return ageciaAuto;
+    }
+
+    public void setAgeciaAuto(String ageciaAuto) {
+        this.ageciaAuto = ageciaAuto;
     }
 }
